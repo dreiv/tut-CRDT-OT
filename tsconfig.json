@@ -1,0 +1,11 @@
+{
+  "compilerOptions": {
+    "module": "ESNext",
+    "moduleResolution": "Bundler",
+    "lib": ["ES2023", "DOM", "DOM.Iterable"],
+
+    "rootDir": "./src",
+    "paths": { "@/*": ["./src/*"] }
+  },
+  "include": ["src"]
+}

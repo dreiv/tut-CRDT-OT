@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>tut-CRDT-OT</title>
+    <style>
+      body {
+        font-family: system-ui, sans-serif;
+        padding: 2rem;
+        max-width: 800px;
+        margin: 0 auto;
+      }
+      .container {
+        display: flex;
+        gap: 1rem;
+        margin: 1rem 0;
+      }
+      textarea {
+        width: 100%;
+        height: 150px;
+        padding: 0.5rem;
+      }
+      .output-box {
+        border: 1px solid #ccc;
+        padding: 1rem;
+        min-height: 100px;
+        background: #f9f9f9;
+      }
+      ins {
+        background-color: #e6ffed;
+        text-decoration: none;
+        border-bottom: 2px solid #28a745;
+      }
+      del {
+        background-color: #ffeef0;
+        text-decoration: line-through;
+        color: #cb2431;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>tut-CRDT-OT: Reconciliation Demo</h1>
+
+    <button id="reset-btn">Reset to Initial Text</button>
+
+    <div class="container">
+      <div>
+        <h3>User 1 (Node A)</h3>
+        <textarea id="text-1"></textarea>
+      </div>
+      <div>
+        <h3>User 2 (Node B)</h3>
+        <textarea id="text-2"></textarea>
+      </div>
+    </div>
+
+    <button id="process-btn">Process & Reconcile (OT)</button>
+
+    <h3>Final Reconciled Output</h3>
+    <div id="output-box" class="output-box">
+      <p id="final-text">Merge results will appear here...</p>
+    </div>
+
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>
